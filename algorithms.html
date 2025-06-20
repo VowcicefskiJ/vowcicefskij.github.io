@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms & Data Structures - CS 499 ePortfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        nav a:hover {
+            background: #2c3e50;
+        }
+        
+        main {
+            padding: 2rem;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #e74c3c;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .enhancement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .enhancement-card {
+            background: white;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .enhancement-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .enhancement-card h4 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .complexity-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #e74c3c;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        pre code {
+            background: transparent;
+            color: #ecf0f1;
+            padding: 0;
+        }
+        
+        .algorithm-stats {
+            background: #ecf0f1;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        
+        .algorithm-stats h5 {
+            margin: 0 0 0.5rem 0;
+            color: #2c3e50;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .algorithm-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .algorithm-list li {
+            background: #f8f9fa;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-left: 4px solid #e74c3c;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .algorithm-list li strong {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Algorithms & Data Structures</h1>
+            <p>Enhanced Numeric Overflow Detection Tool with Advanced Data Structures</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">← Back to Portfolio</a>
+            <a href="software-design.html">← Software Design</a>
+            <a href="databases.html">Databases →</a>
+        </nav>
+        
+        <main>
+            <section class="section">
+                <h2>Artifact Description</h2>
+                <div class="highlight-box">
+                    <p><strong>Original Project:</strong> CS 405 Basic Numeric Overflow Detection (C++)<br>
+                    <strong>Created:</strong> 2023<br>
+                    <strong>Enhancement Focus:</strong> Advanced data structures, algorithms, and performance optimization</p>
+                </div>
+                
+                <p>This artifact began as a simple C++ program that checked integer overflow by comparing against <code>INT_MAX</code> and <code>INT_MIN</code>. The enhancement transformed it into a sophisticated algorithmic system implementing multiple advanced data structures and optimization techniques.</p>
+                
+                <div class="algorithm-stats">
+                    <h5>Algorithmic Complexity Achievements</h5>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">O(log n)</div>
+                            <div class="stat-label">BST Search</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">O(log n)</div>
+                            <div class="stat-label">Heap Operations</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">O(1)</div>
+                            <div class="stat-label">DP Cache Access</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">O(n)</div>
+                            <div class="stat-label">Tree Traversal</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Advanced Data Structures Implementation</h2>
+                
+                <div class="enhancement-grid">
+                    <div class="enhancement-card">
+                        <h4>Binary Search Tree</h4>
+                        <span class="complexity-badge">O(log n) Search</span>
+                        <p>Custom BST implementation for efficient overflow event storage and retrieval with range queries and pattern analysis.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Dynamic Programming Cache</h4>
+                        <span class="complexity-badge">O(1) Access</span>
+                        <p>Memoization system for overflow boundary calculations with performance analytics and cache hit/miss tracking.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Priority Queue (Heap)</h4>
+                        <span class="complexity-badge">O(log n) Insert/Extract</span>
+                        <p>Max-heap implementation for managing critical overflow events based on severity and urgency.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Advanced Analytics Engine</h4>
+                        <span class="complexity-badge">O(n) Pattern Analysis</span>
+                        <p>Statistical analysis algorithms including median calculation, distribution analysis, and trend detection.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Core Algorithm Implementations</h2>
+                
+                <h3>1. Binary Search Tree with Custom Event Storage</h3>
+                <pre><code>class OverflowEventBST {
+private:
+    std::unique_ptr&lt;BST_Node&gt; root;
+    
+    std::unique_ptr&lt;BST_Node&gt; insert_recursive(
+        std::unique_ptr&lt;BST_Node&gt; node, 
+        const OverflowEvent& event
+    ) {
+        if (!node) {
+            total_events++;
+            return std::make_unique&lt;BST_Node&gt;(event);
+        }
+        
+        if (event.event_id &lt; node-&gt;event.event_id) {
+            node-&gt;left = insert_recursive(std::move(node-&gt;left), event);
+        } else if (event.event_id &gt; node-&gt;event.event_id) {
+            node-&gt;right = insert_recursive(std::move(node-&gt;right), event);
+        }
+        
+        return node;
+    }
+    
+public:
+    // O(log n) search operations
+    OverflowEvent* search(long long event_id);
+    std::vector&lt;OverflowEvent&gt; search_by_range(long long min_id, long long max_id);
+    std::vector&lt;OverflowEvent&gt; search_by_severity(const std::string& severity);
+};</code></pre>
+                
+                <h3>2. Dynamic Programming Optimization Cache</h3>
+                <pre><code>class OverflowDP_Cache {
+private:
+    std::unordered_map&lt;std::string, 
+        std::unordered_map&lt;std::string, long long&gt;&gt; boundary_cache;
+    std::unordered_map&lt;std::string, int&gt; cache_hits;
+    
+public:
+    long long get_overflow_boundary(const std::string& data_type, 
+                                   const std::string& operation) {
+        std::string cache_key = data_type + "_" + operation;
+        
+        // O(1) cache lookup
+        if (boundary_cache[data_type].find(operation) != 
+            boundary_cache[data_type].end()) {
+            cache_hits[cache_key]++;
+            return boundary_cache[data_type][operation];
+        }
+        
+        // Calculate and cache result
+        long long boundary = calculate_boundary_dp(data_type, operation);
+        boundary_cache[data_type][operation] = boundary;
+        return boundary;
+    }
+};</code></pre>
+                
+                <h3>3. Priority Queue with Custom Heapify Operations</h3>
+                <pre><code>class CriticalEventPriorityQueue {
+private:
+    std::vector&lt;OverflowEvent&gt; heap;
+    
+    void heapify_up(int index) {
+        while (index &gt; 0 && 
+               get_priority(heap[index]) &gt; get_priority(heap[parent(index)])) {
+            std::swap(heap[index], heap[parent(index)]);
+            index = parent(index);
+        }
+    }
+    
+    void heapify_down(int index) {
+        int largest = index;
+        int left = left_child(index);
+        int right = right_child(index);
+        
+        if (left &lt; heap.size() && 
+            get_priority(heap[left]) &gt; get_priority(heap[largest])) {
+            largest = left;
+        }
+        
+        if (right &lt; heap.size() && 
+            get_priority(heap[right]) &gt; get_priority(heap[largest])) {
+            largest = right;
+        }
+        
+        if (largest != index) {
+            std::swap(heap[index], heap[largest]);
+            heapify_down(largest);
+        }
+    }
+    
+    int get_priority(const OverflowEvent& event) const {
+        int base_priority = 0;
+        if (event.severity == "CRITICAL") base_priority = 100;
+        else if (event.severity == "HIGH") base_priority = 75;
+        else if (event.severity == "MEDIUM") base_priority = 50;
+        else base_priority = 25;
+        
+        return base_priority + (100 - event.steps_to_overflow);
+    }
+};</code></pre>
+                
+                <h3>4. Template-Based Generic Detection Engine</h3>
+                <pre><code>template&lt;typename T&gt;
+bool detect_and_analyze_overflow(T initial_value, T increment, 
+                                int max_steps, const std::string& data_type) {
+    // Use DP cache for optimized boundary calculation
+    long long boundary = dp_cache.get_overflow_boundary(data_type, "add");
+    
+    T current_value = initial_value;
+    T safe_max = std::numeric_limits&lt;T&gt;::max();
+    
+    for (int step = 0; step &lt; max_steps; ++step) {
+        // Advanced overflow detection using type-safe comparison
+        if (current_value &gt; safe_max - increment) {
+            // Create comprehensive event with severity analysis
+            std::string severity = determine_severity(step + 1, data_type);
+            OverflowEvent event(next_event_id++, get_current_timestamp(), 
+                              data_type, "OVERFLOW", 
+                              static_cast&lt;long long&gt;(initial_value),
+                              static_cast&lt;long long&gt;(increment),
+                              static_cast&lt;long long&gt;(current_value),
+                              step + 1, severity);
+            
+            // Store in BST and priority queue
+            event_tree.insert(event);
+            priority_queue.insert(event);
+            
+            return true;
+        }
+        current_value += increment;
+    }
+    return false;
+}</code></pre>
+            </section>
+            
+            <section class="section">
+                <h2>Advanced Analytics and Pattern Recognition</h2>
+                
+                <h3>Statistical Analysis Algorithms</h3>
+                <p>The enhanced system implements sophisticated pattern analysis using STL algorithms:</p>
+                
+                <pre><code>void analyze_overflow_patterns() {
+    std::vector&lt;OverflowEvent&gt; all_events = event_tree.get_all_events_sorted();
+    
+    // Pattern analysis using advanced algorithms
+    std::unordered_map&lt;std::string, int&gt; severity_count;
+    std::unordered_map&lt;std::string, int&gt; type_count;
+    std::vector&lt;int&gt; steps_distribution;
+    
+    for (const auto& event : all_events) {
+        severity_count[event.severity]++;
+        type_count[event.data_type]++;
+        steps_distribution.push_back(event.steps_to_overflow);
+    }
+    
+    // Statistical calculations using STL algorithms
+    std::sort(steps_distribution.begin(), steps_distribution.end());
+    double average_steps = std::accumulate(steps_distribution.begin(), 
+                                          steps_distribution.end(), 0.0) / 
+                          steps_distribution.size();
+    
+    int median = steps_distribution[steps_distribution.size() / 2];
+}</code></pre>
+                
+                <h3>Performance Optimization Features</h3>
+                <ul>
+                    <li><strong>Memory Management:</strong> Smart pointers for automatic memory management</li>
+                    <li><strong>Cache Optimization:</strong> DP memoization reduces redundant calculations</li>
+                    <li><strong>Efficient Search:</strong> O(log n) BST operations for large datasets</li>
+                    <li><strong>Priority Processing:</strong> Heap-based critical event management</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2>Course Outcomes Demonstrated</h2>
+                
+                <div class="enhancement-grid">
+                    <div class="enhancement-card">
+                        <h4>Course Outcome 3: Computing Solutions</h4>
+                        <p>Implemented sophisticated algorithmic solutions using BST, heap, and DP optimization while managing complexity trade-offs.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Course Outcome 4: Innovative Techniques</h4>
+                        <p>Applied advanced C++ features including templates, smart pointers, and STL algorithms for professional-grade implementation.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Course Outcome 5: Security Mindset</h4>
+                        <p>Focused on preventing buffer overflow vulnerabilities through comprehensive detection and analysis systems.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Learning Outcomes & Technical Growth</h2>
+                
+                <h3>Advanced Concepts Mastered</h3>
+                <ul>
+                    <li><strong>Generic Programming:</strong> Template specialization for type-safe overflow detection</li>
+                    <li><strong>Data Structure Design:</strong> Custom BST with advanced search capabilities</li>
+                    <li><strong>Algorithm Optimization:</strong> Dynamic programming for performance enhancement</li>
+                    <li><strong>Memory Management:</strong> Modern C++ RAII principles with smart pointers</li>
+                    <li><strong>Complexity Analysis:</strong> Understanding time/space trade-offs in algorithm design</li>
+                </ul>
+                
+                <h3>Challenges and Solutions</h3>
+                <div class="highlight-box">
+                    <p><strong>Template Complexity:</strong> Learning generic programming required understanding compiler template instantiation and type deduction.</p>
+                    <p><strong>Memory Management:</strong> Implementing tree structures with proper cleanup using unique_ptr and move semantics.</p>
+                    <p><strong>Algorithm Integration:</strong> Combining multiple data structures (BST, heap, hash map) into a cohesive system required careful interface design.</p>
+                    <p><strong>Performance Optimization:</strong> Balancing feature richness with computational efficiency through strategic caching and algorithmic choices.</p>
+                </div>
+                
+                <div class="algorithm-stats">
+                    <h5>Final System Statistics</h5>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">1,200+</div>
+                            <div class="stat-label">Lines of Code</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">5</div>
+                            <div class="stat-label">Data Structures</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">15+</div>
+                            <div class="stat-label">Algorithms</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Template</div>
+                            <div class="stat-label">Generic Design</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>Professional Impact:</strong> This enhancement demonstrates mastery of advanced algorithmic thinking, data structure design, and performance optimization—essential skills for systems programming in robotics and embedded systems where efficiency and reliability are critical.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
