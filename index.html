@@ -1,10 +1,295 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My ePortfolio</title>
-  </head>
-  <body>
-    <h1>Welcome to My CS 499 ePortfolio!</h1>
-    <p>This site will contain my enhanced projects and reflections.</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 499 ePortfolio - Professional Self-Assessment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            background: #2c3e50;
+        }
+        
+        main {
+            padding: 2rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section h3 {
+            color: #34495e;
+            margin-top: 2rem;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-card {
+            background: white;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .skill-card h4 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CS 499 ePortfolio</h1>
+            <p>Professional Self-Assessment & Enhanced Artifacts</p>
+        </header>
+        
+        <nav>
+            <a href="#introduction">Introduction</a>
+            <a href="#coursework">Coursework Impact</a>
+            <a href="#artifacts">Artifacts</a>
+            <a href="code-review.html">Code Review</a>
+            <a href="#career">Career Readiness</a>
+        </nav>
+        
+        <main>
+            <section id="introduction" class="section">
+                <h2>Professional Self-Assessment</h2>
+                
+                <div class="highlight-box">
+                    <p><strong>Welcome to my Computer Science capstone ePortfolio!</strong> This collection represents my growth over three years in the SNHU Computer Science program and demonstrates my readiness to contribute to the field of intelligent systems and robotics.</p>
+                </div>
+                
+                <p>Throughout my journey in the Computer Science program, I have evolved from writing basic functional code to developing sophisticated, secure, and scalable applications that meet industry standards. My passion for technology extends beyond academic requirements into real-world applications, particularly in embedded systems, automation technology, and drone systems—fields that demand reliable code architecture, efficient algorithms, robust database design, and security-conscious development practices.</p>
+            </section>
+            
+            <section id="coursework" class="section">
+                <h2>Coursework Impact and Professional Development</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h4>Collaborative Environments</h4>
+                        <p>Through MVVM architecture implementation and modular design patterns, I've demonstrated ability to create code that supports team collaboration and organizational decision-making.</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <h4>Professional Communication</h4>
+                        <p>Refined technical writing and presentation skills through comprehensive documentation, code reviews, and narrative explanations of complex technical concepts.</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <h4>Algorithmic Thinking</h4>
+                        <p>Mastered algorithmic principles through template programming, data structure optimization, and implementation of statistical algorithms for predictive analytics.</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <h4>Innovation & Industry Standards</h4>
+                        <p>Applied cutting-edge techniques including Firebase integration, materialized views, SQL triggers, and modern Android development patterns.</p>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <h4>Security-First Mindset</h4>
+                        <p>Implemented comprehensive security measures including SHA-256 hashing, input sanitization, and overflow prevention to anticipate adversarial exploits.</p>
+                    </div>
+                </div>
+                
+                <h3>Key Learning Areas</h3>
+                <p>My program experience has covered:</p>
+                <ul>
+                    <li><strong>Full-Stack Development:</strong> MEAN stack (MongoDB, Express.js, Angular, Node.js)</li>
+                    <li><strong>Data Structures & Algorithms:</strong> Performance optimization and algorithmic efficiency</li>
+                    <li><strong>Secure Programming:</strong> C++ and Java security best practices</li>
+                    <li><strong>Mobile Development:</strong> Android apps with Kotlin and modern architecture patterns</li>
+                    <li><strong>Database Systems:</strong> From basic SQL to advanced analytics and cloud integration</li>
+                </ul>
+            </section>
+            
+            <section id="artifacts" class="section">
+                <h2>Enhanced Artifacts Portfolio</h2>
+                
+                <div class="highlight-box">
+                    <p>My three enhanced artifacts demonstrate mastery across all core computer science domains, showing progression from functional student code to professional-quality software solutions.</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h4>Software Design & Engineering</h4>
+                        <h5>Inventory Management App (Android/Kotlin)</h5>
+                        <p><strong>Enhancement:</strong> Implemented MVVM architecture, security improvements with SHA-256 hashing, and modular utility classes.</p>
+                        <p><strong>Skills Demonstrated:</strong> Design patterns, separation of concerns, security implementation</p>
+                        <a href="software-design.html" class="btn">View Details</a>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <h4>Algorithms & Data Structures</h4>
+                        <h5>Numeric Overflow Detection Tool (C++)</h5>
+                        <p><strong>Enhancement:</strong> Transformed basic overflow checks into sophisticated template-based system with comprehensive testing framework.</p>
+                        <p><strong>Skills Demonstrated:</strong> Generic programming, template optimization, algorithm design</p>
+                        <a href="algorithms.html" class="btn">View Details</a>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <h4>Database Systems</h4>
+                        <h5>Analytics-Enhanced Inventory System</h5>
+                        <p><strong>Enhancement:</strong> Added predictive analytics, materialized views, SQL triggers, and Firebase cloud integration.</p>
+                        <p><strong>Skills Demonstrated:</strong> Database optimization, analytics implementation, cloud integration</p>
+                        <a href="databases.html" class="btn">View Details</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="career" class="section">
+                <h2>Career Alignment & Professional Readiness</h2>
+                
+                <h3>Target Specialization: Intelligent Systems & Robotics</h3>
+                <p>The skills demonstrated in this portfolio directly support my career goals in robotics and drone systems:</p>
+                
+                <ul>
+                    <li><strong>Embedded Systems:</strong> Memory-conscious programming and template optimization translate to resource-constrained environments</li>
+                    <li><strong>Real-time Systems:</strong> Performance optimization expertise crucial for real-time control systems</li>
+                    <li><strong>IoT Integration:</strong> Database synchronization and cloud integration support connected device ecosystems</li>
+                    <li><strong>Safety-Critical Code:</strong> Security-focused development essential for autonomous systems</li>
+                </ul>
+                
+                <h3>Professional Contributions</h3>
+                <p>This ePortfolio demonstrates readiness to contribute immediately to software development teams in roles involving:</p>
+                <ul>
+                    <li>Full-stack application development with scalable architecture</li>
+                    <li>Systems programming with performance and security emphasis</li>
+                    <li>Database design and analytics implementation</li>
+                    <li>Cross-platform development and cloud integration</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Professional Growth:</strong> My journey has taught me to think like a computer scientist, approaching problems with systematic analysis while keeping real-world applications and end users in mind. This portfolio represents not an endpoint, but a foundation for continued growth in computer science.</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 CS 499 ePortfolio - Computer Science Capstone</p>
+            <p>Southern New Hampshire University</p>
+        </footer>
+    </div>
+</body>
 </html>
