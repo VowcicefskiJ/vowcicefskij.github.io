@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Design & Engineering - CS 499 ePortfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        nav a:hover {
+            background: #2c3e50;
+        }
+        
+        main {
+            padding: 2rem;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .enhancement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .enhancement-card {
+            background: white;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .enhancement-card h4 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Software Design & Engineering</h1>
+            <p>Inventory Management App - MVVM Architecture Enhancement</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">← Back to Portfolio</a>
+            <a href="algorithms.html">Algorithms →</a>
+            <a href="databases.html">Databases →</a>
+        </nav>
+        
+        <main>
+            <section class="section">
+                <h2>Artifact Description</h2>
+                <div class="highlight-box">
+                    <p><strong>Original Project:</strong> CS 360 Inventory Management App (Android/Kotlin)<br>
+                    <strong>Created:</strong> 2024<br>
+                    <strong>Enhancement Focus:</strong> Professional software architecture and security implementation</p>
+                </div>
+                
+                <p>This artifact is an Android inventory management application originally built for CS 360. The app allows users to create accounts, manage inventory items, and receive SMS notifications for low stock levels. The original version used basic SQLite storage with mixed business logic directly in UI components.</p>
+            </section>
+            
+            <section class="section">
+                <h2>Enhancement Justification</h2>
+                <p>I selected this project because it provided an excellent opportunity to demonstrate professional software development skills by addressing significant architectural and security deficiencies. The transformation from a functional student project to a professionally structured application showcases industry-standard development practices.</p>
+                
+                <div class="enhancement-grid">
+                    <div class="enhancement-card">
+                        <h4>MVVM Architecture</h4>
+                        <p>Implemented Model-View-ViewModel pattern to separate business logic from UI components, creating maintainable and testable code structure.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Modular Design</h4>
+                        <p>Created utility classes (SecurityUtils, ValidationUtils, NotificationHelper, Constants) to eliminate code duplication and improve maintainability.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Security Enhancements</h4>
+                        <p>Replaced plain-text passwords with SHA-256 hashing and implemented input sanitization to prevent injection attacks.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Performance Optimization</h4>
+                        <p>Improved app performance through proper state management and efficient data flow between architectural layers.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Course Outcomes Addressed</h2>
+                <ul>
+                    <li><strong>Course Outcome 1:</strong> Collaborative environments through modular architecture that supports team development</li>
+                    <li><strong>Course Outcome 2:</strong> Professional communication through clear code documentation and architectural decisions</li>
+                    <li><strong>Course Outcome 4:</strong> Industry-standard techniques including MVVM pattern and modern Android development practices</li>
+                    <li><strong>Course Outcome 5:</strong> Security mindset through password hashing and input validation implementation</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2>Technical Implementation Details</h2>
+                
+                <h3>Advanced Modular Architecture with Utility Classes</h3>
+                <p>Implemented comprehensive utility system demonstrating professional software engineering:</p>
+                
+                <pre><code>// SecurityUtils.kt - Advanced cryptographic security
+object SecurityUtils {
+    fun hashPasswordWithSalt(password: String, salt: ByteArray? = null): Pair&lt;String, ByteArray&gt; {
+        val actualSalt = salt ?: generateSalt()
+        val digest = MessageDigest.getInstance("SHA-256")
+        
+        digest.update(actualSalt)
+        val hashedBytes = digest.digest(password.toByteArray(Charsets.UTF_8))
+        val hashedPassword = hashedBytes.joinToString("") { "%02x".format(it) }
+        
+        return Pair(hashedPassword, actualSalt)
+    }
+    
+    fun verifyPassword(password: String, storedHash: String, salt: ByteArray?): Boolean {
+        val (hashedPassword, _) = if (salt != null && salt.isNotEmpty()) {
+            hashPasswordWithSalt(password, salt)
+        } else {
+            Pair(hashPasswordSimple(password), ByteArray(0))
+        }
+        return constantTimeEquals(hashedPassword, storedHash)
+    }
+    
+    private fun constantTimeEquals(a: String, b: String): Boolean {
+        if (a.length != b.length) return false
+        var result = 0
+        for (i in a.indices) {
+            result = result or (a[i].code xor b[i].code)
+        }
+        return result == 0
+    }
+}</code></pre>
+                
+                <pre><code>// ValidationUtils.kt - Comprehensive input validation
+object ValidationUtils {
+    data class ValidationResult(val isValid: Boolean, val errorMessage: String = "")
+    
+    fun validateLoginInput(username: String, password: String): ValidationResult {
+        if (username.isBlank() || password.isBlank()) {
+            return ValidationResult(false, Constants.EMPTY_FIELDS_ERROR)
+        }
+        
+        if (username.trim().length &lt; Constants.MIN_USERNAME_LENGTH) {
+            return ValidationResult(false, Constants.USERNAME_TOO_SHORT_ERROR)
+        }
+        
+        if (password.length &lt; Constants.MIN_PASSWORD_LENGTH) {
+            return ValidationResult(false, Constants.PASSWORD_TOO_SHORT_ERROR)
+        }
+        
+        if (!isValidUsername(username.trim())) {
+            return ValidationResult(false, "Username can only contain letters, numbers, and underscores")
+        }
+        
+        return ValidationResult(true)
+    }
+    
+    fun isValidPhoneNumber(phoneNumber: String): Boolean {
+        val digitsOnly = phoneNumber.replace(Regex("[^0-9]"), "")
+        if (digitsOnly.length &lt; Constants.PHONE_NUMBER_MIN_LENGTH) return false
+        
+        val phoneRegex = Regex("^[+]?[0-9]{10,15}$")
+        return phoneRegex.matches(digitsOnly)
+    }
+}</code></pre>
+                
+                <pre><code>// NotificationHelper.kt - Enterprise notification management
+object NotificationHelper {
+    fun sendLowStockNotification(context: Context, itemName: String, quantity: Int) {
+        try {
+            // Input validation and security checks
+            if (itemName.isBlank() || quantity &lt; 0) return
+            
+            // Android 13+ permission check
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                if (ContextCompat.checkSelfPermission(context, 
+                    android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                    return
+                }
+            }
+            
+            val sanitizedItemName = itemName.trim().take(50)
+            val notification = NotificationCompat.Builder(context, Constants.NOTIFICATION_CHANNEL_ID)
+                .setSmallIcon(android.R.drawable.ic_dialog_alert)
+                .setContentTitle(Constants.NOTIFICATION_TITLE)
+                .setContentText(String.format(Constants.NOTIFICATION_TEXT_TEMPLATE, 
+                    sanitizedItemName, quantity))
+                .setStyle(NotificationCompat.BigTextStyle()
+                    .bigText(String.format(Constants.NOTIFICATION_BIG_TEXT_TEMPLATE, 
+                        sanitizedItemName, quantity)))
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_ALARM)
+                .setAutoCancel(true)
+                .build()
+                
+            val notificationId = sanitizedItemName.hashCode()
+            NotificationManagerCompat.from(context).notify(notificationId, notification)
+            
+        } catch (e: SecurityException) {
+            Log.e(TAG, "Security exception sending notification: ${e.message}")
+        }
+    }
+}</code></pre>
+                
+                <pre><code>// Constants.kt - Comprehensive application configuration
+object Constants {
+    // Security Constants
+    const val MIN_USERNAME_LENGTH = 3
+    const val MIN_PASSWORD_LENGTH = 6
+    const val PHONE_NUMBER_MIN_LENGTH = 10
+    const val MAX_ITEM_NAME_LENGTH = 50
+    const val MAX_QUANTITY = 99999
+    
+    // UI Constants with type safety
+    val PADDING_MEDIUM = 16.dp
+    val SPACING_LARGE = 24.dp
+    val CARD_ELEVATION = 4.dp
+    
+    // Error Messages
+    const val USERNAME_TOO_SHORT_ERROR = "Username must be at least 3 characters"
+    const val PASSWORD_TOO_SHORT_ERROR = "Password must be at least 6 characters"
+    const val INVALID_CREDENTIALS_ERROR = "Invalid username or password"
+    
+    // Notification Templates
+    const val LOW_STOCK_SMS_TEMPLATE = "🚨 INVENTORY ALERT: '%s' is running low with only %d items remaining. Please restock soon!"
+    const val NOTIFICATION_BIG_TEXT_TEMPLATE = "URGENT: '%s' inventory is critically low with only %d items remaining."
+}</code></pre>
+            </section>
+            
+            <section class="section">
+                <h2>Professional Software Engineering Achievements</h2>
+                
+                <div class="enhancement-grid">
+                    <div class="enhancement-card">
+                        <h4>Advanced Cryptographic Security</h4>
+                        <p><strong>Salted SHA-256 Hashing:</strong> Implemented cryptographically secure password storage with random salt generation and constant-time comparison to prevent timing attacks.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Defensive Programming</h4>
+                        <p><strong>Comprehensive Validation:</strong> Multi-layer input validation with SQL injection prevention, XSS protection, and edge case handling throughout the application.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Enterprise Error Handling</h4>
+                        <p><strong>Robust Exception Management:</strong> Try-catch blocks with specific error types, graceful degradation, and comprehensive audit logging for production readiness.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Modular Architecture</h4>
+                        <p><strong>Separation of Concerns:</strong> Four specialized utility classes handling security, validation, notifications, and configuration with zero coupling between modules.</p>
+                    </div>
+                </div>
+                
+                <h3>Security Features Implemented</h3>
+                <ul>
+                    <li><strong>Cryptographic Security:</strong> SHA-256 with salt, SecureRandom salt generation, constant-time comparisons</li>
+                    <li><strong>Input Sanitization:</strong> Regex-based cleaning, length limits, dangerous character removal</li>
+                    <li><strong>Permission Management:</strong> Android 13+ notification permissions, SMS permission handling</li>
+                    <li><strong>Audit Logging:</strong> Security event logging for compliance and monitoring</li>
+                    <li><strong>Injection Prevention:</strong> SQL injection pattern detection, XSS protection</li>
+                </ul>
+                
+                <h3>Professional Development Practices</h3>
+                <ul>
+                    <li><strong>Constants Management:</strong> 40+ centralized constants eliminating magic strings</li>
+                    <li><strong>Type Safety:</strong> Jetpack Compose dp units, data classes, null safety</li>
+                    <li><strong>Error Handling:</strong> ValidationResult pattern, comprehensive exception catching</li>
+                    <li><strong>Code Documentation:</strong> KDoc comments explaining algorithms and security considerations</li>
+                    <li><strong>Performance Optimization:</strong> Lazy initialization, efficient string operations</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2>Learning Outcomes & Technical Growth</h2>
+                
+                <h3>Advanced Concepts Mastered</h3>
+                <ul>
+                    <li><strong>MVVM Architecture:</strong> Complete separation of presentation, business logic, and data layers</li>
+                    <li><strong>Security Engineering:</strong> Cryptographic implementations with industry-standard practices</li>
+                    <li><strong>Modular Design:</strong> Creating reusable, testable components with clear interfaces</li>
+                    <li><strong>Modern Android Development:</strong> Jetpack Compose, Material Design 3, coroutines</li>
+                    <li><strong>Professional Practices:</strong> Code documentation, error handling, performance optimization</li>
+                </ul>
+                
+                <h3>Challenges and Solutions</h3>
+                <div class="highlight-box">
+                    <p><strong>Architecture Refactoring:</strong> Breaking apart tightly coupled code required careful dependency analysis and systematic refactoring of UI components.</p>
+                    <p><strong>Security Implementation:</strong> Implementing salted password hashing while maintaining backward compatibility for existing users required careful migration strategy.</p>
+                    <p><strong>MVVM Learning Curve:</strong> Understanding proper data flow between Model, View, and ViewModel components required research and iterative testing.</p>
+                    <p><strong>Performance Optimization:</strong> Balancing feature richness with app responsiveness through efficient state management and lazy loading strategies.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>Professional Impact:</strong> This enhancement demonstrates the difference between functional student code and professional-quality software. The MVVM architecture, security improvements, and modular design show capability to build maintainable, secure applications following industry standards that would be suitable for enterprise deployment.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
