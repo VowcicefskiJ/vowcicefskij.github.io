@@ -190,7 +190,7 @@
     <div class="container">
         <header>
             <h1>Algorithms & Data Structures</h1>
-            <p>Enhanced Numeric Overflow Detection Tool with Advanced Data Structures</p>
+            <p>My Enhanced Numeric Overflow Detection Tool with Advanced Data Structures</p>
         </header>
         
         <nav>
@@ -201,17 +201,17 @@
         
         <main>
             <section class="section">
-                <h2>Artifact Description</h2>
+                <h2>My Project Overview</h2>
                 <div class="highlight-box">
                     <p><strong>Original Project:</strong> CS 405 Basic Numeric Overflow Detection (C++)<br>
-                    <strong>Created:</strong> 2023<br>
-                    <strong>Enhancement Focus:</strong> Advanced data structures, algorithms, and performance optimization</p>
+                    <strong>When I Made It:</strong> 2023<br>
+                    <strong>What I Enhanced:</strong> Added advanced data structures, algorithms, and made it way more efficient</p>
                 </div>
                 
-                <p>This artifact began as a simple C++ program that checked integer overflow by comparing against <code>INT_MAX</code> and <code>INT_MIN</code>. The enhancement transformed it into a sophisticated algorithmic system implementing multiple advanced data structures and optimization techniques.</p>
+                <p>I started with this pretty basic C++ program from my CS 405 class that just checked if integers would overflow by comparing them to <code>INT_MAX</code> and <code>INT_MIN</code>. For my capstone project, I decided to completely transform it into something much more sophisticated by adding multiple data structures and optimization techniques I learned throughout my program.</p>
                 
                 <div class="algorithm-stats">
-                    <h5>Algorithmic Complexity Achievements</h5>
+                    <h5>What I Achieved with Algorithm Complexity</h5>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value">O(log n)</div>
@@ -234,39 +234,39 @@
             </section>
             
             <section class="section">
-                <h2>Advanced Data Structures Implementation</h2>
+                <h2>Data Structures I Implemented</h2>
                 
                 <div class="enhancement-grid">
                     <div class="enhancement-card">
                         <h4>Binary Search Tree</h4>
                         <span class="complexity-badge">O(log n) Search</span>
-                        <p>Custom BST implementation for efficient overflow event storage and retrieval with range queries and pattern analysis.</p>
+                        <p>I built my own BST from scratch to store and quickly find overflow events. It can do range searches and help me analyze patterns in the data.</p>
                     </div>
                     
                     <div class="enhancement-card">
                         <h4>Dynamic Programming Cache</h4>
                         <span class="complexity-badge">O(1) Access</span>
-                        <p>Memoization system for overflow boundary calculations with performance analytics and cache hit/miss tracking.</p>
+                        <p>I added a smart caching system that remembers overflow calculations so I don't have to compute the same things over and over. It really speeds things up!</p>
                     </div>
                     
                     <div class="enhancement-card">
                         <h4>Priority Queue (Heap)</h4>
                         <span class="complexity-badge">O(log n) Insert/Extract</span>
-                        <p>Max-heap implementation for managing critical overflow events based on severity and urgency.</p>
+                        <p>I implemented a max-heap to automatically prioritize the most critical overflow events based on how severe they are.</p>
                     </div>
                     
                     <div class="enhancement-card">
-                        <h4>Advanced Analytics Engine</h4>
+                        <h4>Analytics Engine</h4>
                         <span class="complexity-badge">O(n) Pattern Analysis</span>
-                        <p>Statistical analysis algorithms including median calculation, distribution analysis, and trend detection.</p>
+                        <p>I wrote algorithms to analyze patterns in the overflow data, like finding medians, looking at distributions, and spotting trends.</p>
                     </div>
                 </div>
             </section>
             
             <section class="section">
-                <h2>Core Algorithm Implementations</h2>
+                <h2>The Algorithms I Coded</h2>
                 
-                <h3>1. Binary Search Tree with Custom Event Storage</h3>
+                <h3>1. My Binary Search Tree Implementation</h3>
                 <pre><code>class OverflowEventBST {
 private:
     std::unique_ptr&lt;BST_Node&gt; root;
@@ -290,13 +290,13 @@ private:
     }
     
 public:
-    // O(log n) search operations
+    // These give me O(log n) search speed
     OverflowEvent* search(long long event_id);
     std::vector&lt;OverflowEvent&gt; search_by_range(long long min_id, long long max_id);
     std::vector&lt;OverflowEvent&gt; search_by_severity(const std::string& severity);
 };</code></pre>
                 
-                <h3>2. Dynamic Programming Optimization Cache</h3>
+                <h3>2. My Dynamic Programming Cache System</h3>
                 <pre><code>class OverflowDP_Cache {
 private:
     std::unordered_map&lt;std::string, 
@@ -308,21 +308,21 @@ public:
                                    const std::string& operation) {
         std::string cache_key = data_type + "_" + operation;
         
-        // O(1) cache lookup
+        // Super fast O(1) lookup if I've seen this before
         if (boundary_cache[data_type].find(operation) != 
             boundary_cache[data_type].end()) {
             cache_hits[cache_key]++;
             return boundary_cache[data_type][operation];
         }
         
-        // Calculate and cache result
+        // If not, calculate it once and save it for next time
         long long boundary = calculate_boundary_dp(data_type, operation);
         boundary_cache[data_type][operation] = boundary;
         return boundary;
     }
 };</code></pre>
                 
-                <h3>3. Priority Queue with Custom Heapify Operations</h3>
+                <h3>3. My Priority Queue with Custom Heap Operations</h3>
                 <pre><code>class CriticalEventPriorityQueue {
 private:
     std::vector&lt;OverflowEvent&gt; heap;
@@ -367,20 +367,20 @@ private:
     }
 };</code></pre>
                 
-                <h3>4. Template-Based Generic Detection Engine</h3>
+                <h3>4. My Template-Based Detection Engine</h3>
                 <pre><code>template&lt;typename T&gt;
 bool detect_and_analyze_overflow(T initial_value, T increment, 
                                 int max_steps, const std::string& data_type) {
-    // Use DP cache for optimized boundary calculation
+    // Using my DP cache to avoid recalculating boundaries
     long long boundary = dp_cache.get_overflow_boundary(data_type, "add");
     
     T current_value = initial_value;
     T safe_max = std::numeric_limits&lt;T&gt;::max();
     
     for (int step = 0; step &lt; max_steps; ++step) {
-        // Advanced overflow detection using type-safe comparison
+        // My improved overflow detection logic
         if (current_value &gt; safe_max - increment) {
-            // Create comprehensive event with severity analysis
+            // Figure out how serious this overflow is
             std::string severity = determine_severity(step + 1, data_type);
             OverflowEvent event(next_event_id++, get_current_timestamp(), 
                               data_type, "OVERFLOW", 
@@ -389,7 +389,7 @@ bool detect_and_analyze_overflow(T initial_value, T increment,
                               static_cast&lt;long long&gt;(current_value),
                               step + 1, severity);
             
-            // Store in BST and priority queue
+            // Store it in both my BST and priority queue
             event_tree.insert(event);
             priority_queue.insert(event);
             
@@ -402,15 +402,15 @@ bool detect_and_analyze_overflow(T initial_value, T increment,
             </section>
             
             <section class="section">
-                <h2>Advanced Analytics and Pattern Recognition</h2>
+                <h2>Pattern Analysis and Statistics</h2>
                 
-                <h3>Statistical Analysis Algorithms</h3>
-                <p>The enhanced system implements sophisticated pattern analysis using STL algorithms:</p>
+                <h3>My Statistical Analysis Code</h3>
+                <p>I wrote this part to analyze patterns in overflow events using STL algorithms I learned about:</p>
                 
                 <pre><code>void analyze_overflow_patterns() {
     std::vector&lt;OverflowEvent&gt; all_events = event_tree.get_all_events_sorted();
     
-    // Pattern analysis using advanced algorithms
+    // I count different types of patterns
     std::unordered_map&lt;std::string, int&gt; severity_count;
     std::unordered_map&lt;std::string, int&gt; type_count;
     std::vector&lt;int&gt; steps_distribution;
@@ -421,7 +421,7 @@ bool detect_and_analyze_overflow(T initial_value, T increment,
         steps_distribution.push_back(event.steps_to_overflow);
     }
     
-    // Statistical calculations using STL algorithms
+    // Using STL algorithms for statistical calculations
     std::sort(steps_distribution.begin(), steps_distribution.end());
     double average_steps = std::accumulate(steps_distribution.begin(), 
                                           steps_distribution.end(), 0.0) / 
@@ -430,58 +430,58 @@ bool detect_and_analyze_overflow(T initial_value, T increment,
     int median = steps_distribution[steps_distribution.size() / 2];
 }</code></pre>
                 
-                <h3>Performance Optimization Features</h3>
+                <h3>Performance Improvements I Made</h3>
                 <ul>
-                    <li><strong>Memory Management:</strong> Smart pointers for automatic memory management</li>
-                    <li><strong>Cache Optimization:</strong> DP memoization reduces redundant calculations</li>
-                    <li><strong>Efficient Search:</strong> O(log n) BST operations for large datasets</li>
-                    <li><strong>Priority Processing:</strong> Heap-based critical event management</li>
+                    <li><strong>Smart Memory Management:</strong> I used smart pointers so I don't have to worry about memory leaks</li>
+                    <li><strong>Caching:</strong> My DP system means I never calculate the same thing twice</li>
+                    <li><strong>Fast Searching:</strong> The BST gives me O(log n) speed even with lots of data</li>
+                    <li><strong>Priority Processing:</strong> The heap automatically handles the most important events first</li>
                 </ul>
             </section>
             
             <section class="section">
-                <h2>Course Outcomes Demonstrated</h2>
+                <h2>How This Meets Course Outcomes</h2>
                 
                 <div class="enhancement-grid">
                     <div class="enhancement-card">
                         <h4>Course Outcome 3: Computing Solutions</h4>
-                        <p>Implemented sophisticated algorithmic solutions using BST, heap, and DP optimization while managing complexity trade-offs.</p>
+                        <p>I implemented complex algorithms using BST, heap, and DP while learning how to balance performance trade-offs.</p>
                     </div>
                     
                     <div class="enhancement-card">
                         <h4>Course Outcome 4: Innovative Techniques</h4>
-                        <p>Applied advanced C++ features including templates, smart pointers, and STL algorithms for professional-grade implementation.</p>
+                        <p>I used advanced C++ features like templates, smart pointers, and STL algorithms to create professional-quality code.</p>
                     </div>
                     
                     <div class="enhancement-card">
                         <h4>Course Outcome 5: Security Mindset</h4>
-                        <p>Focused on preventing buffer overflow vulnerabilities through comprehensive detection and analysis systems.</p>
+                        <p>I focused on preventing buffer overflow vulnerabilities by building comprehensive detection and analysis systems.</p>
                     </div>
                 </div>
             </section>
             
             <section class="section">
-                <h2>Learning Outcomes & Technical Growth</h2>
+                <h2>What I Learned & How I Grew</h2>
                 
-                <h3>Advanced Concepts Mastered</h3>
+                <h3>New Skills I Developed</h3>
                 <ul>
-                    <li><strong>Generic Programming:</strong> Template specialization for type-safe overflow detection</li>
-                    <li><strong>Data Structure Design:</strong> Custom BST with advanced search capabilities</li>
-                    <li><strong>Algorithm Optimization:</strong> Dynamic programming for performance enhancement</li>
-                    <li><strong>Memory Management:</strong> Modern C++ RAII principles with smart pointers</li>
-                    <li><strong>Complexity Analysis:</strong> Understanding time/space trade-offs in algorithm design</li>
+                    <li><strong>Generic Programming:</strong> I figured out how to use templates to make my code work with different data types safely</li>
+                    <li><strong>Data Structure Design:</strong> I learned how to build my own BST with custom search features</li>
+                    <li><strong>Algorithm Optimization:</strong> I discovered how dynamic programming can make programs way faster</li>
+                    <li><strong>Modern C++:</strong> I got comfortable with RAII principles and smart pointers</li>
+                    <li><strong>Complexity Analysis:</strong> I learned how to think about time vs space trade-offs when designing algorithms</li>
                 </ul>
                 
-                <h3>Challenges and Solutions</h3>
+                <h3>Challenges I Faced and Overcame</h3>
                 <div class="highlight-box">
-                    <p><strong>Template Complexity:</strong> Learning generic programming required understanding compiler template instantiation and type deduction.</p>
-                    <p><strong>Memory Management:</strong> Implementing tree structures with proper cleanup using unique_ptr and move semantics.</p>
-                    <p><strong>Algorithm Integration:</strong> Combining multiple data structures (BST, heap, hash map) into a cohesive system required careful interface design.</p>
-                    <p><strong>Performance Optimization:</strong> Balancing feature richness with computational efficiency through strategic caching and algorithmic choices.</p>
+                    <p><strong>Template Confusion:</strong> Learning generic programming was tough - I had to understand how the compiler handles templates and type deduction.</p>
+                    <p><strong>Memory Management:</strong> Building tree structures without memory leaks was tricky until I learned about unique_ptr and move semantics.</p>
+                    <p><strong>Integrating Everything:</strong> Getting my BST, heap, and hash map to work together smoothly required careful planning of how they'd talk to each other.</p>
+                    <p><strong>Performance vs Features:</strong> I had to learn when to prioritize speed versus adding cool features, and how caching could help with both.</p>
                 </div>
                 
                 <div class="algorithm-stats">
-                    <h5>Final System Statistics</h5>
+                    <h5>Final Project Stats</h5>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value">1,200+</div>
@@ -503,32 +503,32 @@ bool detect_and_analyze_overflow(T initial_value, T increment,
                 </div>
                 
                 <div class="highlight-box">
-                    <p><strong>Professional Impact:</strong> This enhancement demonstrates mastery of advanced algorithmic thinking, data structure design, and performance optimization—essential skills for systems programming in robotics and embedded systems where efficiency and reliability are critical.</p>
+                    <p><strong>Why This Matters for My Career:</strong> This project taught me advanced algorithmic thinking, data structure design, and performance optimization—stuff that's super important for the kind of systems programming I want to do in robotics and embedded systems where efficiency and reliability are everything.</p>
                 </div>
             </section>
             
             <section class="section">
-                <h2>Complete Source Code Download</h2>
+                <h2>Download My Complete Code</h2>
                 <div class="highlight-box">
-                    <h3>Advanced C++ Algorithm Implementation</h3>
-                    <p><strong>Download the complete C++ project for technical review:</strong></p>
+                    <h3>My Advanced C++ Algorithm Project</h3>
+                    <p><strong>Check out my complete C++ implementation:</strong></p>
                     
                     <div class="enhancement-grid">
                         <div class="enhancement-card">
                             <h4>Enhanced Overflow Detection System</h4>
-                            <p>Sophisticated C++ implementation with advanced data structures and algorithmic optimizations</p>
+                            <p>My complete C++ project with all the advanced data structures and optimizations I built</p>
                             <ul>
-                                <li>✅ Binary Search Tree Implementation</li>
-                                <li>✅ Dynamic Programming Cache</li>
-                                <li>✅ Priority Queue (Heap)</li>
-                                <li>✅ Template Programming</li>
-                                <li>✅ Smart Pointer Management</li>
+                                <li>Binary Search Tree Implementation</li>
+                                <li>Dynamic Programming Cache</li>
+                                <li>Priority Queue (Heap)</li>
+                                <li>Template Programming</li>
+                                <li>Smart Pointer Management</li>
                             </ul>
                             <a href="https://www.dropbox.com/scl/fi/45gcipcxj6ktpfgivcznb/NumericOverflowCPPProject.zip?rlkey=dyjbs9ov8p7tnpzwbiqhmrbde&st=lgbn1vpw&dl=0" 
                                class="btn" target="_blank">
-                                📦 Download C++ Project (ZIP)
+                                📦 Download My C++ Project (ZIP)
                             </a>
-                            <p><em>Includes complete C++ source code, headers, and comprehensive testing framework</em></p>
+                            <p><em>Includes all my C++ source code, headers, and the testing framework I wrote</em></p>
                         </div>
                     </div>
                 </div>
