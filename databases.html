@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Systems - CS 499 ePortfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        nav a:hover {
+            background: #2c3e50;
+        }
+        
+        main {
+            padding: 2rem;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #27ae60;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .enhancement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .enhancement-card {
+            background: white;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .enhancement-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .enhancement-card h4 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .algorithm-badge {
+            background: #27ae60;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #27ae60;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        pre code {
+            background: transparent;
+            color: #ecf0f1;
+            padding: 0;
+        }
+        
+        .database-stats {
+            background: #ecf0f1;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        
+        .database-stats h5 {
+            margin: 0 0 0.5rem 0;
+            color: #2c3e50;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .algorithm-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .algorithm-list li {
+            background: #f8f9fa;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-left: 4px solid #27ae60;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .algorithm-list li strong {
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Database Systems Enhancement</h1>
+            <p>Analytics-Enhanced Inventory Management with Advanced Algorithms</p>
+        </header>
+        
+        <nav>
+            <a href="index.html">← Back to Portfolio</a>
+            <a href="software-design.html">← Software Design</a>
+            <a href="algorithms.html">← Algorithms</a>
+        </nav>
+        
+        <main>
+            <section class="section">
+                <h2>Artifact Description</h2>
+                <div class="highlight-box">
+                    <p><strong>Original Project:</strong> CS 360 Basic Inventory Management (Android/SQLite)<br>
+                    <strong>Created:</strong> 2024<br>
+                    <strong>Enhancement Focus:</strong> Advanced analytics, predictive algorithms, and intelligent database optimization</p>
+                </div>
+                
+                <p>This artifact began as a simple Android inventory app with basic CRUD operations. The enhancement transformed it into an intelligent analytics platform implementing advanced statistical algorithms, predictive modeling, and sophisticated database optimization techniques.</p>
+                
+                <div class="database-stats">
+                    <h5>Database Enhancement Metrics</h5>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Advanced Algorithms</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">5</div>
+                            <div class="stat-label">Database Tables</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">SQL Triggers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">2</div>
+                            <div class="stat-label">Materialized Views</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Advanced Database Architecture</h2>
+                
+                <div class="enhancement-grid">
+                    <div class="enhancement-card">
+                        <h4>Analytics Engine</h4>
+                        <span class="algorithm-badge">12 Statistical Algorithms</span>
+                        <p>Comprehensive analytics system implementing EOQ, linear regression, time-series analysis, and predictive forecasting algorithms.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Materialized Views</h4>
+                        <span class="algorithm-badge">O(1) Query Access</span>
+                        <p>Pre-computed aggregation views for instant analytics with automated refresh mechanisms and performance monitoring.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>SQL Triggers</h4>
+                        <span class="algorithm-badge">Automated Business Logic</span>
+                        <p>Intelligent triggers for auto-reordering, usage tracking, and cache invalidation with sophisticated priority scoring.</p>
+                    </div>
+                    
+                    <div class="enhancement-card">
+                        <h4>Predictive Analytics</h4>
+                        <span class="algorithm-badge">Machine Learning Ready</span>
+                        <p>Statistical forecasting using exponential smoothing, trend analysis, and stockout probability calculations.</p>
+                    </div>
+                </div>
+            </section
